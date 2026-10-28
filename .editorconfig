@@ -1,0 +1,24 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+# 개행처리 윈도우는 crlf
+charset = utf-8
+# 알바펫
+trim_trailing_whitespace = false
+insert_final_newline = false
+# 모든파일
+
+[*.{html,css,js,jsx}]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+# 해당 파일들만

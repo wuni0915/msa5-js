@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+    <link rel="stylesheet" href="18_ajax.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.20.0/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios@<x.x.x /메이저, 마이너, 페치(보안)-버전들>수정하세요/dist/axios.min.js"></script> -->
+    <script src="18_ajax.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="">
+        <input
+          type="number"
+          name="page"
+          id="page"
+          placeholder="페이지"
+          required
+        />
+        <input
+          type="number"
+          name="limit"
+          id="limit"
+          placeholder="출력갯수"
+          required
+        />
+        <!-- //타입... 넘버로 하면 숫자만 입력 가능. 모바일할때 숫자열만 뜸 아니면 문자열도 같이 뜸
+        //requierd 필수 항목?-빈채로 제출 금지시키는거 ID는 html요소를 식별할수있는 고유값
+        //name 은 서버가 쓴다. css, html, java script에선 안씀~ -->
+        <button type="submit">전송</button>
+        <!-- //백엔드에서 name이라는 키에 접근하면 name의 값에 접근할수있다. 인풋태그에 있는 네임이라는 값이 백엔드로 넘어갔을때 키로써 접근하기 위함
+        //min= "5" max="10"으로 상한하한을 지정 -->
+        <!-- get, post, delete, patch, 하나 더 있음 -->
+        <!-- 버튼을 누르면 폼에 액션이 간다. -->
+      </form>
+      <div class="card-conteiner">
+        <!-- 대량의 뭔가를 감싸고있으면 container라고 이름 붙임 -->
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">1: 삐삐삐삐</p>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">2: 아아아아</p>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">3: 나나나나나</p>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">4: 집가고싶어</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

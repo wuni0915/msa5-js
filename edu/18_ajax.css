@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+.card-conteiner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* 몇번을 어떤비율로 반복 */
+  /* 브라우저의 최소 픽셀이 500px이라 다 줄여도 2줄이 나온거임 한줄로 나오려면 200 > 300으로 변경해주면 좋다. 다만 실무에선 걍 미디어쿼리씀 */
+  gap: 10px;
+}
+/* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+/* 두요소간의 사이는 되도록 마진탑이런거보다는 플렉스나 그리드로 주는게 용이 - 암묵적룰 */
+
+.card {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+.card-img {
+  background-image: url("../images/home3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* padding-top: 80%; */
+}
