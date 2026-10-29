@@ -9,7 +9,7 @@
   gap: 50px;
   padding: 20px;
 }
-.card-conteiner {
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* 몇번을 어떤비율로 반복 */
@@ -28,7 +28,6 @@
 }
 
 .card-img {
-  background-image: url("../images/home3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
