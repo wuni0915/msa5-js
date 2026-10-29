@@ -21,14 +21,17 @@ form.addEventListener("submit", async (e)=>{
   //이벤트 객체에서 이벤트가 발생한 요소에 접근(e.target)해서 필요한 값 획득
   const page = e.target.page.value;
   // page라는 아이디의 인풋태그를 가져온다. 그래서 2를 가져온다. 돔객체에서 가져온 값은 문자열이다.우리눈에선 숫자지만 컴퓨터에선 문자열임. 우리한테 필요한 값으로 형변환 할 필요가 있다. 데이터를 받아올때까지 대기하는 동기처리를 해야한다.
+  //가져올 페이지
 
   const limit = e.target.limit.value;
   // 둘다 name을 가져왔다. 
+  // 갯수
 
   const url = `${baseURL}${path}?page=${page}&limit=${limit}`;
   // const url = `${baseURL}${path}?page=/2/&limit=/100/`;
   try {
     const response = await axios.get(url);
+    //서버에 데이터를 요청하러 가는 동안 다른 작업이 동시에 일어나는 비동기 처리를 막기 위해 await를 사용하여 동기처리 한다. 서버에서 데이터를 받고 다음작업으로 이어갈수있다.
     console.log(response);
     //데이터 보는 화면을 모르겠는디.
 
@@ -43,6 +46,7 @@ form.addEventListener("submit", async (e)=>{
       const cardImg =document.createElement('div');
       cardImg.classList.add('card-img');
       cardImg.style.backgroundImage = `url('${item.download_url}')`;
+      // cardImg.style.backgroundImage = `url('${item.download_url}')`; 왜 유알엘 붙인거지?
       //카드이미지 노드에  여기서 노드가 뭐야
       
       //3.card-text 요소 생성
