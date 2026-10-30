@@ -9,10 +9,12 @@
   <script src="99_tng.js" defer></script>
 </head>
 <body>
+  <!-- 폼태그는 기본적으로 사용자의 입력값을 받겠다는 거라 여기서 쓰면 별로 좋지는 않다. -->
   <div class="container">
     <h1>한번에 3개씩만 획득</h1>
     <div id="btn">
       <button id="next_btn" >다음</button>
+      <!-- 클릭이벤트만 발생하는 경우 일반 버튼 타입으로 하면된다. 디폴트값 버튼이긴함. -->
       <button id="clear">초기화</button>
     </div>
       <div class="card-container"></div>

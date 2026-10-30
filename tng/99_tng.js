@@ -3,6 +3,7 @@
   let clear = document.querySelector("#clear")
   const container = document.querySelector(".container")
   let page = 0;
+  // 시작값이 0부터
 let limit = 3;
         const cardContainer = document.querySelector(".card-container")
   
